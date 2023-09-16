@@ -2,6 +2,7 @@
 alias cddf='cd ~/.dotfiles'
 alias ll='ls -l'
 alias la='ls -A'
+alias mkalias='vim ~/.dotfiles/.bash_aliases'
 
 # program aliases
 alias p='pnpm'
