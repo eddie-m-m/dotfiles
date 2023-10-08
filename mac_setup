@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# VS Code
+brew install visual-studio-code
+
+# Bash
+brew install bash
+
+# Add bash profile to home directory, reference dotfile bashrc
+touch ~/.bash_profile
+echo "source ~/.dotfiles/bashrc" >> ~/.bash_profile
