@@ -10,6 +10,7 @@ alias rebash='source ~/.bash_profile'
 alias p='pnpm'
 alias py='python3'
 alias py2='python2'
+alias pip='pip3'
 
 # git aliases
 alias com='git commit -m'
@@ -20,6 +21,7 @@ alias grco='git recentco'
 alias gs='git status'
 alias gl='git log'
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gcl='git config --list'
 
 # vim aliases
 alias vimconf='vim ~/.dotfiles/vimconfig.vim'
@@ -31,6 +33,6 @@ alias dis='docker images'
 alias di='docker image'
 alias dp='docker ps'
 alias dcom='docker compose'
-alias dcup='docker-compose up'
-alias dcdn='docker-compose down --remove-orphans'
-alias dcr='docker-compose run --rm -it'
+alias dcup='docker compose up'
+alias dcdn='docker compose down --remove-orphans'
+alias dcr='docker compose run --rm -it'
