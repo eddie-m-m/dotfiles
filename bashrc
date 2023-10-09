@@ -1,4 +1,4 @@
-source ~/.dotfiles/.git-completion
-source ~/.dotfiles/.git-prompt
-source ~/.dotfiles/.bash_aliases
-source ~/.dotfiles/.bash_variables
+source ~/.dotfiles/git-completion.sh
+source ~/.dotfiles/git-prompt.sh
+source ~/.dotfiles/bash_aliases.sh
+source ~/.dotfiles/bash_variables.sh
