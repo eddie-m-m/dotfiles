@@ -3,7 +3,7 @@ alias cddf='cd ~/.dotfiles'
 alias c='clear'
 alias ll='ls -l'
 alias la='ls -A'
-alias mkalias='vim ~/.dotfiles/.bash_aliases'
+alias mkalias='vim ~/.dotfiles/bash_aliases.sh'
 alias rebash='source ~/.bash_profile'
 
 # program aliases
