@@ -9,7 +9,6 @@ alias rebash='source ~/.bash_profile'
 # program aliases
 alias p='pnpm'
 alias py='python3'
-alias py2='python2'
 alias pip='pip3'
 
 # git aliases
