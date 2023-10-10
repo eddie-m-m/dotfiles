@@ -10,6 +10,7 @@ alias rebash='source ~/.bash_profile'
 alias p='pnpm'
 alias py='python3'
 alias pip='pip3'
+alias pyut='python3 -m unittest'
 
 # git aliases
 alias com='git commit -m'
