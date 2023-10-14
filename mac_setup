@@ -9,6 +9,9 @@ brew install bash
 # VS Code
 brew install visual-studio-code
 
+# treez man!
+brew install tree
+
 # Add bash profile to home directory, reference dotfile bashrc
 touch ~/.bash_profile
 echo "source ~/.dotfiles/bashrc" >> ~/.bash_profile
