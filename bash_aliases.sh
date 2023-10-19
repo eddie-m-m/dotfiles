@@ -11,10 +11,12 @@ alias rebash='source ~/.bash_profile'
 alias p='pnpm'
 alias py='python3'
 alias pip='pip3'
+alias pipupgrade='pip install --upgrade pip'
 alias pyut='python3 -m unittest'
 alias pyvenv='python3 -m venv'
 alias mkvenv='python3 -m venv venv'
 alias runvenv='. venv/bin/activate'
+
 
 # git aliases
 alias com='git commit -m'
