@@ -29,6 +29,7 @@ alias gs='git status'
 alias gl='git log'
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gcl='git config --list'
+alias gstart='git checkout main && git pull && git checkout -b'
 
 # vim aliases
 alias vimconf='vim ~/.dotfiles/vimconfig.vim'
