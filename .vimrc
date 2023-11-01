@@ -16,9 +16,6 @@ filetype indent on
 " turn syntax highlighting on
 syntax on
 
-" highlight cursors
-set cursorline
-
 " enable auto completion menu after pressing TAB
 set wildmenu
 

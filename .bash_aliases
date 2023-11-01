@@ -6,6 +6,7 @@ alias la='ls -a'
 alias lla='ls -la'
 alias mkalias='vim ~/.dotfiles/.bash_aliases'
 alias rebash='source ~/.bash_profile'
+alias revim='~/.dotfiles/revim'
 
 # program aliases
 alias p='pnpm'
