@@ -7,4 +7,4 @@ PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH
 PATH=$PATH:$HOME/.dotfiles/bin
 
-eval "$(/usr/local/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
