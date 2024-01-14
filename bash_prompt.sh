@@ -46,7 +46,7 @@ BRIGHT_WHITE="\[$ESC[${BRIGHT};${FG_WHITE}m\]"
 
 case $OSTYPE in
 "darwin"*)
-  USER_COLOR=$BRIGHT_VIOLET
+  USER_COLOR=$BRIGHT_WHITE
   ;;
 "linux-gnu"*)
   USER_COLOR=$BRIGHT_RED
@@ -54,4 +54,4 @@ case $OSTYPE in
 esac
 
 GIT_PS1_SHOWDIRTYSTATE=true
-PS1="\n$USER_COLOR\u@\H: $BRIGHT_YELLOW\w$BRIGHT_CYAN\$(__git_ps1 ' [%s]')\n$RESET\$ "
+PS1="\n$USER_COLOR\u@\H: $BRIGHT_GREEN\w$BRIGHT_WHITE\$(__git_ps1 ' [%s]')\n$RESET\$ "
