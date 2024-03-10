@@ -12,6 +12,9 @@ brew install bash
 # VS Code
 brew install visual-studio-code
 
+# Rectangle
+brew install --cask rectangle
+
 # treez man!
 brew install tree
 
