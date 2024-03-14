@@ -8,6 +8,8 @@ alias mkalias='vim ~/.dotfiles/bash_aliases.sh'
 alias rebash='source ~/.bash_profile'
 alias revim='~/.dotfiles/revim'
 alias bserv='brew services'
+alias pg_start='brew services start postgresql@16'
+alias pg_stop='brew services stop postgresql@16'
 
 # program aliases
 alias p='pnpm'
