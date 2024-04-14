@@ -1,4 +1,4 @@
-export EDITOR=vim
+export EDITOR=nvim
 export VISUAL="$EDITOR"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export REDIS_URL=redis://localhost:6379/0
