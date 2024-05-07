@@ -4,7 +4,7 @@ alias c='clear'
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
-alias mkalias='vim ~/.dotfiles/bash_aliases.sh'
+alias mkalias='nvim ~/.dotfiles/bash_aliases.sh'
 alias rebash='source ~/.bash_profile'
 alias revim='~/.dotfiles/revim'
 alias bserv='brew services'
@@ -34,8 +34,11 @@ alias gl='git log'
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gcl='git config --list'
 
-# vim aliases
+# config aliases
 alias vimconf='vim ~/.dotfiles/vimconfig.vim'
+alias tmuxconf='nvim ~/.tmux.conf'
+alias alconf='nvim ~/.config/alacritty/alacritty.toml'
+alias nvimconf='nvim ~/.config/nvim/
 
 # docker aliases
 alias dc='docker container'
