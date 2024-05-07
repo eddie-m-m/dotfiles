@@ -38,7 +38,7 @@ alias gcl='git config --list'
 alias vimconf='vim ~/.dotfiles/vimconfig.vim'
 alias tmuxconf='nvim ~/.tmux.conf'
 alias alconf='nvim ~/.config/alacritty/alacritty.toml'
-alias nvimconf='nvim ~/.config/nvim/
+alias nvimconf='nvim ~/.config/nvim/'
 
 # docker aliases
 alias dc='docker container'
