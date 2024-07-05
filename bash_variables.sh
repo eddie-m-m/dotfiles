@@ -8,5 +8,6 @@ export REDIS_URL=redis://localhost:6379/0
 PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH
 PATH=$PATH:$HOME/.dotfiles/bin:$HOME
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
