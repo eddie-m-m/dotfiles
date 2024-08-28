@@ -57,7 +57,7 @@ call plug#end()
 
 " MAPPINGS ------------------------------------------------------------------- {{{
 
-inoremap jj <esc>
+inoremap jf <esc>
 " }}}
 
 
