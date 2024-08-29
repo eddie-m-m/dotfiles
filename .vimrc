@@ -1,3 +1,25 @@
+call plug#begin('~/.vim/plugged')
+
+    Plug 'dense-analysis/ale'
+
+    Plug 'preservim/nerdtree'
+
+    Plug 'https://github.com/joshdick/onedark.vim.git'
+
+    Plug 'sheerun/vim-polyglot'
+
+    Plug 'itchyny/lightline.vim'
+
+    Plug 'prabirshrestha/vim-lsp'
+
+    Plug 'prabirshrestha/asyncomplete.vim'
+
+    Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+    Plug 'mattn/vim-lsp-settings'
+
+call plug#end()
+
 " add line numbers
 set number
 
@@ -15,6 +37,7 @@ filetype indent on
 
 " turn syntax highlighting on
 syntax on
+colorscheme onedark
 
 " enable auto completion menu after pressing TAB
 set wildmenu
@@ -26,7 +49,7 @@ set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 " tab width
-set tabstop=4
+set tabstop=2
 
 " space characters in place of tab
 set expandtab
@@ -41,27 +64,21 @@ set showmode
 set showmatch
 set hlsearch
 
+let g:lightline = {
+  \ 'colorscheme': 'onedark'
+  \}
 
-" PLUGINS -------------------------------------------------------------------- {{{
-
-call plug#begin('~/.vim/plugged')
-
-    Plug 'dense-analysis/ale'
-
-    Plug 'preservim/nerdtree'
-
-call plug#end()
-
-" }}}
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
 
-" MAPPINGS ------------------------------------------------------------------- {{{
-
+" MAPPINGS
 inoremap jf <esc>
-" }}}
+xnoremap jf <esc>
 
 
-" VIMSCRIPT ------------------------------------------------------------------ {{{
+" VIMSCRIPT 
 
 " enable code folding with marker method
 
@@ -70,11 +87,7 @@ augroup filetype_vim
 	autocmd Filetype vim setlocal foldmethod=marker
 augroup END
 
-
-" }}}
-
-
-" STATUS LINE ---------------------------------------------------------------- {{{
+" STATUS LINE 
 
 " clear status line on reload
 set statusline=
@@ -90,4 +103,3 @@ set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
 
 " show status line on second-to-last line
 set laststatus=2
-" }}}
