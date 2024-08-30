@@ -4,8 +4,7 @@ alias c='clear'
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
-alias mkalias='nvim ~/.dotfiles/bash_aliases.sh'
-alias rebash='source ~/.bash_profile'
+
 alias revim='~/.dotfiles/revim'
 alias bserv='brew services'
 alias pg_start='brew services start postgresql@16'
@@ -36,8 +35,7 @@ alias gcl='git config --list'
 
 # config aliases
 alias vimconf='vim ~/.dotfiles/vimconfig.vim'
-alias tmuxconf='nvim ~/.tmux.conf'
-alias alconf='nvim ~/.config/alacritty/alacritty.toml'
+
 alias nvimconf='nvim ~/.config/nvim/'
 
 # docker aliases
@@ -48,6 +46,19 @@ alias di='docker image'
 alias dp='docker ps'
 alias dcom='docker compose'
 alias dcomb='docker compose build'
-alias dcomd='docker compose down' 
+alias dcomd='docker compose down'
 alias dcomr='docker compose run --rm -it'
 alias dcomu='docker compose up'
+
+# os-dependent
+if [[ "OSTYPE" == "darwin"* ]]; then
+    alias tmuxconf='nvim ~/.tmux.conf'
+    alias alconf='nvim ~/.config/alacritty/alacritty.toml'
+    alias rebash='source ~/.bash_profile'
+    alias mkalias='nvim ~/.dotfiles/bash_aliases.sh'
+else
+    alias rebash='source ~/.bashrc'
+    alias alconf='vim ~/.config/alacritty/alacritty.toml'
+    alias tmuxconf='vim ~/.tmux.conf'
+    alias mkalias='vim ~/.dotfiles/bash_aliases.sh'
+fi
