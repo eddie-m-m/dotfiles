@@ -38,8 +38,9 @@ alias vimconf='vim ~/.dotfiles/vimconfig.vim'
 
 alias nvimconf='nvim ~/.config/nvim/'
 
-alias keyeditoff='sudo chmod o-rw,g-rw /dev/hidraw3'
-alias keyediton='sudo chmod a+rw /dev/hidraw3'
+alias keyeditoff='sudo chmod o-rw,g-rw /dev/hidraw*'
+alias keyediton='sudo chmod a+rw /dev/hidraw*'
+alias gethidinfo='bash ~/.dotfiles/displayhidrawinfo.sh'
 
 # docker aliases
 alias dc='docker container'
