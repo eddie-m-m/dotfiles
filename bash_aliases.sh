@@ -56,9 +56,9 @@ alias dcomu='docker compose up'
 
 # os-dependent
 if [[ "OSTYPE" == "darwin"* ]]; then
+    alias rebash='source ~/.bash_profile'
     alias tmuxconf='nvim ~/.tmux.conf'
     alias alconf='nvim ~/.config/alacritty/alacritty.toml'
-    alias rebash='source ~/.bash_profile'
     alias mkalias='nvim ~/.dotfiles/bash_aliases.sh'
 else
     alias rebash='source ~/.bashrc'
