@@ -30,6 +30,7 @@ alias gbl='git branch --list'
 alias grco='git recentco'
 alias gs='git status'
 alias gl='git log'
+alias gf='git fetch'
 alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gcl='git config --list'
 
