@@ -1,6 +1,5 @@
 export EDITOR=vim
 export VISUAL="$EDITOR"
-export REDIS_URL=redis://localhost:6379/0
 
 
 # Initialize Path
@@ -11,4 +10,5 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
     export EDITOR=nvim
     export BASH_SILENCE_DEPRECATION_WARNING=1
+    export REDIS_URL=redis://localhost:6379/0
 fi

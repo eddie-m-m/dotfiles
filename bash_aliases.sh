@@ -1,14 +1,13 @@
 # general aliases
 alias cddf='cd ~/.dotfiles'
 alias c='clear'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
+alias ll='ls -lh'
+alias la='ls -ah'
+alias lla='ls -lha'
 
 alias revim='~/.dotfiles/revim'
 alias bserv='brew services'
 alias pg_start='brew services start postgresql@16'
-alias bu='brew update && brew upgrade'
 alias pg_stop='brew services stop postgresql@16'
 
 # program aliases
@@ -39,7 +38,7 @@ alias vimconf='vim ~/.dotfiles/vimconfig.vim'
 
 alias nvimconf='nvim ~/.config/nvim/'
 
-alias hidclose='sudo chmod o-rw,g-rw /dev/hidraw*'
+alias hidclose='sudo chmod o-rw,g-rw /dev/hidraw*' 
 alias hidexpose='sudo chmod a+rw /dev/hidraw*'
 alias gethidinfo='bash ~/.dotfiles/displayhidrawinfo.sh'
 
@@ -61,6 +60,7 @@ if [[ "OSTYPE" == "darwin"* ]]; then
     alias tmuxconf='nvim ~/.tmux.conf'
     alias alconf='nvim ~/.config/alacritty/alacritty.toml'
     alias mkalias='nvim ~/.dotfiles/bash_aliases.sh'
+    alias bu='brew update && brew upgrade'
 else
     alias rebash='source ~/.bashrc'
     alias alconf='vim ~/.config/alacritty/alacritty.toml'
