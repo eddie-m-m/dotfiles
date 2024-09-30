@@ -19,7 +19,8 @@ alias pyut='python3 -m unittest'
 alias pyvenv='python3 -m venv'
 alias mkvenv='python3 -m venv venv'
 alias runvenv='. venv/bin/activate'
-
+alias arm-as='aarch64-linux-gnu-as'
+alias arm-ld='aarch64-linux-gnu-ld'
 
 # git aliases
 alias com='git commit -m'
