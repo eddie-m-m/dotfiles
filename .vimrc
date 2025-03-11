@@ -18,6 +18,8 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'mattn/vim-lsp-settings'
 
+    Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
+
 call plug#end()
 
 " add line numbers
@@ -43,10 +45,10 @@ colorscheme onedark
 set wildmenu
 
 " make wildmenu behave similar to bash completion
-set wildmode=list:longest
+set wildmode=list:full
 
 " make wildmenu ignore
-set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+set wildignore+=.*,*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 " tab width
 set tabstop=2
@@ -56,6 +58,12 @@ set expandtab
 
 " incrementally highlight characters in search
 set incsearch
+
+let NERDTreeShowHidden=1
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[1 q"
 
 set ignorecase
 set smartcase
@@ -71,6 +79,7 @@ let g:lightline = {
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+nnoremap gd :GoDoc<CR>
 
 
 " MAPPINGS
