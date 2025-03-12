@@ -20,6 +20,8 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 
+    Plug 'puremourning/vimspector'
+
 call plug#end()
 
 " add line numbers
@@ -61,6 +63,10 @@ set incsearch
 
 let NERDTreeShowHidden=1
 nnoremap <C-n> :NERDTreeToggle<CR>
+
+let g:vimspector_enable_mappings = 'HUMAN'
+nnoremap dbg :call vimspector#Launch()<CR>
+
 
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[1 q"
