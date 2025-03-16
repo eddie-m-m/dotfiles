@@ -42,7 +42,7 @@ alias rebash='source ~/.bashrc'
 alias alconf='vim ~/.config/alacritty/alacritty.toml'
 alias tmuxconf='vim ~/.tmux.conf'
 alias mkalias='vim ~/.dotfiles/bash_aliases.sh'
-alias confignvim='cp -a ~/.dotfiles/nvim/. ~/.config/nvim'
+alias confignvim='cp -a ~/.dotfiles/nvim/. ~/.config/nvim/'
 
 alias hidclose='sudo chmod o-rw,g-rw /dev/hidraw*' 
 alias hidexpose='sudo chmod a+rw /dev/hidraw*'

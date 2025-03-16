@@ -89,8 +89,8 @@ nnoremap gd :GoDoc<CR>
 
 
 " MAPPINGS
-inoremap jf <esc>
-xnoremap jf <esc>
+inoremap jk <esc>
+xnoremap jk <esc>
 
 
 " VIMSCRIPT 
