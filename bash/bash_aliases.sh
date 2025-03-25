@@ -20,8 +20,11 @@ alias pyut='python3 -m unittest'
 alias pyvenv='python3 -m venv'
 alias mkvenv='python3 -m venv venv'
 alias runvenv='. venv/bin/activate'
+alias poetryrun='poetry run python3'
 alias arm-as='aarch64-linux-gnu-as'
 alias arm-ld='aarch64-linux-gnu-ld'
+alias gotest='go test -v'
+alias gobuild='go build -o'
 
 # git aliases
 alias com='git commit -m'
@@ -36,12 +39,12 @@ alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gcl='git config --list'
 
 # config aliases
-alias vimconf='vim ~/.dotfiles/vimconfig.vim'
+alias vimconf='nvim ~/.dotfiles/vimconfig.vim'
 alias rebashp='source ~/.bash_profile'
 alias rebash='source ~/.bashrc'
-alias alconf='vim ~/.config/alacritty/alacritty.toml'
-alias tmuxconf='vim ~/.tmux.conf'
-alias mkalias='vim ~/.dotfiles/bash_aliases.sh'
+alias alconf='nvim ~/.config/alacritty/alacritty.toml'
+alias tmuxconf='nvim ~/.tmux.conf'
+alias mkalias='nvim ~/.dotfiles/bash_aliases.sh'
 alias confignvim='cp -a ~/.dotfiles/nvim/. ~/.config/nvim/'
 
 alias hidclose='sudo chmod o-rw,g-rw /dev/hidraw*' 
