@@ -10,6 +10,7 @@ alias bserv='brew services'
 alias pg_start='brew services start postgresql@16'
 alias pg_stop='brew services stop postgresql@16'
 alias bu='brew update && brew upgrade'
+alias task='go-task'
 
 # program aliases
 alias p='pnpm'
@@ -44,7 +45,7 @@ alias rebashp='source ~/.bash_profile'
 alias rebash='source ~/.bashrc'
 alias alconf='nvim ~/.config/alacritty/alacritty.toml'
 alias tmuxconf='nvim ~/.tmux.conf'
-alias mkalias='nvim ~/.dotfiles/bash_aliases.sh'
+alias mkalias='nvim ~/.dotfiles/bash/bash_aliases.sh'
 alias confignvim='cp -a ~/.dotfiles/nvim/. ~/.config/nvim/'
 
 alias hidclose='sudo chmod o-rw,g-rw /dev/hidraw*' 
