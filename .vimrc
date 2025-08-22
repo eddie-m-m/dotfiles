@@ -28,6 +28,9 @@ let g:NERDTreeModifiable = 1
 set number
 set relativenumber
 
+" clipboard copy and paste
+set clipboard=unnamed
+
 " disable compatibility with with vi
 set nocompatible
 
@@ -135,14 +138,19 @@ colorscheme onedark
 let g:cmake_build_dir_location = 'build'
 let g:cmake_build_type = 'Debug'
 
-" cpp
+
+" c, cpp
 
 let g:ale_pattern_options_enabled = 1
-let g:ale_pattern_options = { '\.h$': { 'ale_linters': {'cpp': ['cc', 'gcc', 'clang'] } } }
+let g:ale_pattern_options = { '\.h$': { 'ale_linters': {'c': ['cc', 'gcc', 'clang'] }},  '\.hpp$': { 'ale_linters': {'cpp': ['cc', 'gcc', 'clang'] } } }
 
 " for gcc/clang
+let c_opts = '-std=c23 -Wall'
 let cpp_opts = '-std=c++23 -Wall -Wextra'
-let g:ale_linters = { 'cpp': ['cc','gcc','clang'] }
+let g:ale_linters = { 'c': ['cc', 'gcc', 'clang'], 'cpp': ['cc','gcc','clang'] }
+let g:ale_c_cc_options = c_opts
+let g:ale_c_gcc_options = c_opts
+let g:ale_c_clang_options = c_opts
 let g:ale_cpp_cc_options = cpp_opts
 let g:ale_cpp_gcc_options = cpp_opts
 let g:ale_cpp_clang_options = cpp_opts
