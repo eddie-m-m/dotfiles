@@ -1,29 +1,3 @@
-call plug#begin('~/.vim/plugged')
-
-    Plug 'dense-analysis/ale'
-
-    Plug 'preservim/nerdtree'
-
-    Plug 'cdelledonne/vim-cmake'
-
-    Plug 'itchyny/lightline.vim'
-    
-    Plug 'joshdick/onedark.vim'
-    
-    Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
-
-    Plug 'preservim/tagbar'
-
-    Plug 'ludovicchabant/vim-gutentags'
-
-    Plug 'tpope/vim-dispatch'
-
-call plug#end()
-
-packadd! termdebug
-
-let g:NERDTreeModifiable = 1
-
 " mouse use in all modes
 set mouse=a
 
@@ -69,9 +43,38 @@ set autoindent
 set cindent
 set noexpandtab
 
-
 " incrementally highlight characters in search
 set incsearch
+
+let g:ale_completion_enabled = 1
+
+call plug#begin('~/.vim/plugged')
+
+    Plug 'dense-analysis/ale'
+
+    Plug 'preservim/nerdtree'
+
+    Plug 'cdelledonne/vim-cmake'
+
+    Plug 'itchyny/lightline.vim'
+    
+    Plug 'joshdick/onedark.vim'
+    
+    Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
+
+    Plug 'preservim/tagbar'
+
+    Plug 'ludovicchabant/vim-gutentags'
+
+    Plug 'tpope/vim-dispatch'
+
+    Plug 'vimwiki/vimwiki'
+
+call plug#end()
+
+packadd! termdebug
+
+let g:NERDTreeModifiable = 1
 
 let NERDTreeShowHidden=1
 nnoremap <C-n> :NERDTreeToggle<CR>
@@ -140,19 +143,21 @@ colorscheme onedark
 let g:cmake_build_dir_location = 'build'
 let g:cmake_build_type = 'Debug'
 
-
-" c, cpp
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {'c' : ['clang-format'], 'cpp': ['clang-format']}
+let g:ale_lint_on_save = 1
+" for c, cpp, rust
 
 let g:ale_pattern_options_enabled = 1
 let g:ale_pattern_options = { '\.h$': { 'ale_linters': {'c': ['cc', 'gcc', 'clang'] }},  '\.hpp$': { 'ale_linters': {'cpp': ['cc', 'gcc', 'clang'] } } }
 
-" for gcc/clang
 let c_opts = '-std=c23 -Wall'
 let cpp_opts = '-std=c++23 -Wall -Wextra'
-let g:ale_linters = { 'c': ['cc', 'gcc', 'clang'], 'cpp': ['cc','gcc','clang'] }
+let g:ale_linters = { 'c': ['clangd','cc', 'gcc', 'clang'], 'cpp': ['cc','gcc','clang'], 'rust': ['analyzer']}
 let g:ale_c_cc_options = c_opts
 let g:ale_c_gcc_options = c_opts
 let g:ale_c_clang_options = c_opts
 let g:ale_cpp_cc_options = cpp_opts
 let g:ale_cpp_gcc_options = cpp_opts
 let g:ale_cpp_clang_options = cpp_opts
+
