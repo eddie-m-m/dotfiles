@@ -1,38 +1,26 @@
-" mouse use in all modes
 set mouse=a
 
-" add line numbers
 set number
+
 set relativenumber
 
-" clipboard copy and paste
 set clipboard=unnamed
 
-" disable compatibility with with vi
 set nocompatible
 
-" enable file types
 filetype on
 
-" enable plugins and load plugin for the detected file type
-filetype plugin on
+syntax on
 
-" load an indent file for the detected file type
 filetype indent on
 
-set background=dark
+set background=light
 
-" enable auto completion menu after pressing TAB
 set wildmenu
 
-" make wildmenu behave similar to bash completion
 set wildmode=list:full
 
-" make wildmenu ignore
 set wildignore+=.*,*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
-
-" tab width
-set tabstop=2
 
 " space characters in place of tab
 set expandtab
@@ -43,10 +31,12 @@ set autoindent
 set cindent
 set noexpandtab
 
-" incrementally highlight characters in search
 set incsearch
 
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
+inoremap <silent> <C-space> <CR>
+inoremap <expr> <leader>c coc#start()
+
 
 call plug#begin('~/.vim/plugged')
 
@@ -58,7 +48,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'itchyny/lightline.vim'
     
-    Plug 'joshdick/onedark.vim'
+    Plug 'wadackel/vim-dogrun'
     
     Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 
@@ -69,6 +59,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-dispatch'
 
     Plug 'vimwiki/vimwiki'
+
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -81,7 +73,6 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 
 nnoremap dbg :Termdebug<CR>
 
-
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[1 q"
 
@@ -92,10 +83,10 @@ set showmode
 set showmatch
 set hlsearch
 
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? asyncomplete#close_popup() : "\<cr>"
-nnoremap gd :GoDoc<CR>
+"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"inoremap <expr> <cr> pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+"nnoremap gd :GoDoc<CR>
 
 
 " MAPPINGS
@@ -136,28 +127,37 @@ set laststatus=2
 
 nnoremap <F2> :TagbarToggle<CR>
 
-syntax on
-colorscheme onedark
+colorscheme dogrun
 
 " Build system
 let g:cmake_build_dir_location = 'build'
 let g:cmake_build_type = 'Debug'
 
+let c_opts = '-std=c17 -Wall'
+let cpp_opts = '-std=c++23 -Wall -Wextra'
+
 let g:ale_fix_on_save = 1
-let g:ale_fixers = {'c' : ['clang-format'], 'cpp': ['clang-format']}
+
+let g:ale_fixers = {
+			\'c' : ['clang-format'],
+			\'cpp': ['clang-format']
+			\}
+
 let g:ale_lint_on_save = 1
+
 " for c, cpp, rust
 
-let g:ale_pattern_options_enabled = 1
-let g:ale_pattern_options = { '\.h$': { 'ale_linters': {'c': ['cc', 'gcc', 'clang'] }},  '\.hpp$': { 'ale_linters': {'cpp': ['cc', 'gcc', 'clang'] } } }
+"let g:ale_pattern_options_enabled = 1
 
-let c_opts = '-std=c23 -Wall'
-let cpp_opts = '-std=c++23 -Wall -Wextra'
-let g:ale_linters = { 'c': ['clangd','cc', 'gcc', 'clang'], 'cpp': ['cc','gcc','clang'], 'rust': ['analyzer']}
+let g:ale_linters = {
+			\'c': ['cc', 'gcc', 'clang'],
+			\'cpp': ['cc','gcc','clang'],
+			\'rust': ['analyzer']
+			\}
+
 let g:ale_c_cc_options = c_opts
 let g:ale_c_gcc_options = c_opts
 let g:ale_c_clang_options = c_opts
 let g:ale_cpp_cc_options = cpp_opts
 let g:ale_cpp_gcc_options = cpp_opts
 let g:ale_cpp_clang_options = cpp_opts
-
