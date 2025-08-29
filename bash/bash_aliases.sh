@@ -5,7 +5,7 @@ alias ll='ls -lh'
 alias la='ls -ah'
 alias lla='ls -lha'
 
-alias revim='~/.dotfiles/revim'
+# mac
 alias bserv='brew services'
 alias pg_start='brew services start postgresql@16'
 alias pg_stop='brew services stop postgresql@16'
@@ -40,13 +40,10 @@ alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gcl='git config --list'
 
 # config aliases
-alias vimconf='nvim ~/.dotfiles/vimconfig.vim'
 alias rebashp='source ~/.bash_profile'
 alias rebash='source ~/.bashrc'
-alias alconf='nvim ~/.config/alacritty/alacritty.toml'
-alias tmuxconf='nvim ~/.tmux.conf'
-alias mkalias='nvim ~/.dotfiles/bash/bash_aliases.sh'
-alias confignvim='cp -a ~/.dotfiles/nvim/. ~/.config/nvim/'
+alias tmuxconf='vim ~/.tmux.conf'
+alias mkalias='vim ~/.dotfiles/bash/bash_aliases.sh'
 
 alias hidclose='sudo chmod o-rw,g-rw /dev/hidraw*' 
 alias hidexpose='sudo chmod a+rw /dev/hidraw*'
