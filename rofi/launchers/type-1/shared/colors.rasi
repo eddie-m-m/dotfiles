@@ -10,9 +10,9 @@
  * adapta    catppuccin    everforest    navy       paper
  * arc       cyberpunk     gruvbox       nord       solarized
  * black     dracula       lovelace      onedark    yousai
- * matrix :w
+ * 
  **/
 
 /* Import color-scheme from `colors` directory */
 
-@import "~/.config/rofi/colors/matrix.rasi"
+@import "~/.config/rofi/colors/onedark.rasi"
