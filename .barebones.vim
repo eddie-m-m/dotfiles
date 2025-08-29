@@ -49,3 +49,25 @@ set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
 
 " show status line on second-to-last line
 set laststatus=2
+
+call plug#begin('~/.vim/plugged')
+
+    Plug 'preservim/nerdtree'
+
+    Plug 'cdelledonne/vim-cmake'
+
+    Plug 'itchyny/lightline.vim'
+    
+    Plug 'wadackel/vim-dogrun'
+    
+    Plug 'preservim/tagbar'
+
+    Plug 'ludovicchabant/vim-gutentags'
+
+    Plug 'tpope/vim-dispatch'
+
+	Plug 'vimwiki/vimwiki'
+
+call plug#end()
+
+packadd! termdebug
