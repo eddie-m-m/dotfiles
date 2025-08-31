@@ -23,7 +23,7 @@ alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 
 # config aliases
 alias rebash='source ~/.bashrc'
-alias mkalias='vim ~/.dotfiles/bash_scripts/bash_aliases.sh'
+alias mkalias='vim ~/.dotfiles/scripts/bash_aliases.sh'
 
 alias hidclose='sudo chmod o-rw,g-rw /dev/hidraw*' 
 alias hidexpose='sudo chmod a+rw /dev/hidraw*'
