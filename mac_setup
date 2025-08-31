@@ -13,7 +13,7 @@ brew install bash
 brew install visual-studio-code
 
 # nvim
-brew install neovim
+brew install vim
 
 # Rectangle
 brew install --cask rectangle
@@ -24,8 +24,5 @@ brew install tree
 # Add bash profile to home directory, reference dotfile bashrc
 touch ~/.bash_profile
 echo "source ~/.dotfiles/bashrc" >> ~/.bash_profile
-
-mv ~/.config/nvim ~/.config/nvim.backup
-cp -a ~/.dotfiles/nvim/. ~/.config/nvim/
 
 mv ~/.zprofile ~/.zprofile_old
