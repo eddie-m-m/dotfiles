@@ -1,0 +1,40 @@
+[global]
+format = "<b>%s</b>\n%b"
+
+font = "Monospace 10"
+
+width = 300
+
+notification_limit = 5
+
+origin = top-right
+offset = 15x40
+
+separator_height = 2
+
+corner_radius = 5
+
+idle_threshold = 10
+
+sort = yes
+
+[urgency_low]
+background = "#221122"  
+foreground = "#aaaaaa"
+frame_color = "#442244"
+timeout = 5           
+frame_width = 1
+
+[urgency_normal]
+background = "#442244"
+foreground = "#ffffff"
+frame_color = "#884488"
+timeout = 10          
+frame_width = 1
+
+[urgency_critical]
+background = "#884488"  
+foreground = "#ffffff" 
+frame_color = "#cc66cc"
+timeout = 0           
+frame_width = 2

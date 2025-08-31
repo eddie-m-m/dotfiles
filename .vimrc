@@ -4,7 +4,7 @@ set number
 
 set relativenumber
 
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 set nocompatible
 
