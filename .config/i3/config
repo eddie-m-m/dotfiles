@@ -35,8 +35,11 @@ exec_always --no-startup-id feh --bg-scale ~/wallpapers/alpine-landscape-hd-purp
 bindsym $mod+Shift+s exec --no-startup-id i3-resurrect save
 bindsym $mod+b exec --no-startup-id i3-resurrect restore
 
+for_window [class="Xfce4-appfinder"] floating enable
+for_window [class="Xfce4-appfinder"] center
+bindsym $mod+space exec --no-startup-id xfce4-appfinder --collapsed
 
-bindsym $mod+space exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh
+#bindsym $mod+space exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh
 #bindsym $mod+p exec --no-startup-id powermenu_t2
 
 # Start XDG autostart .desktop files using dex. See also
