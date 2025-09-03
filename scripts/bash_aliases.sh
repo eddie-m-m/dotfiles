@@ -27,4 +27,4 @@ alias mkalias='vim ~/.dotfiles/scripts/bash_aliases.sh'
 
 alias hidclose='sudo chmod o-rw,g-rw /dev/hidraw*' 
 alias hidexpose='sudo chmod a+rw /dev/hidraw*'
-alias gethidinfo='bash ~/.dotfiles/scripts/displayhidrawinfo.sh'
+alias hidinfo='bash ~/.dotfiles/scripts/displayhidrawinfo.sh'
