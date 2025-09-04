@@ -34,8 +34,7 @@ exec_always --no-startup-id feh --bg-scale ~/wallpapers/alpine-landscape-hd-purp
 for_window [class="Xfce4-appfinder"] floating enable
 for_window [class="Xfce4-appfinder"] center
 bindsym $mod+space exec --no-startup-id xfce4-appfinder --collapsed
-
-
+bindsym XF86AudioPlay exec playerctl play-pause
 #bindsym $mod+p exec --no-startup-id powermenu_t2
 
 # Start XDG autostart .desktop files using dex. See also
