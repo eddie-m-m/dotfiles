@@ -31,20 +31,18 @@ exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id dunst 
 exec_always --no-startup-id feh --bg-scale ~/wallpapers/alpine-landscape-hd-purple-tree_1920x1080.jpg
 
-bindsym $mod+Shift+s exec --no-startup-id i3-resurrect save
-bindsym $mod+b exec --no-startup-id i3-resurrect restore
-
 for_window [class="Xfce4-appfinder"] floating enable
 for_window [class="Xfce4-appfinder"] center
 bindsym $mod+space exec --no-startup-id xfce4-appfinder --collapsed
 
-#bindsym $mod+space exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh
+
 #bindsym $mod+p exec --no-startup-id powermenu_t2
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+exec_always --no-startup-id xset s off -dpms
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
