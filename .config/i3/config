@@ -31,9 +31,10 @@ exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id dunst 
 exec_always --no-startup-id feh --bg-scale ~/wallpapers/alpine-landscape-hd-purple-tree_1920x1080.jpg
 
-for_window [class="Xfce4-appfinder"] floating enable
-for_window [class="Xfce4-appfinder"] center
-bindsym $mod+space exec --no-startup-id xfce4-appfinder --collapsed
+#for_window [class="Xfce4-appfinder"] floating enable
+#for_window [class="Xfce4-appfinder"] center
+#bindsym $mod+space exec --no-startup-id xfce4-appfinder --collapsed
+bindsym $mod+space exec --no-startup-id rofi -show drun
 bindsym XF86AudioPlay exec playerctl play-pause
 #bindsym $mod+p exec --no-startup-id powermenu_t2
 
