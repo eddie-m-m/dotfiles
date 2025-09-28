@@ -123,8 +123,8 @@
   "custom/show-vpn-status": {
     "exec": "~/.config/scripts/show-vpn-status.sh",
     "return-type": "json",
-    "interval": 2,
     "tooltip": true,
+    "on-click": "nm-connection-editor"
   },
   "tray": {
     "icon-size": 14,
