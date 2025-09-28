@@ -72,3 +72,11 @@ tooltip {
 #custom-screenrecording-indicator.active {
   color: #a55555;
 }
+
+#custom-show-vpn-status.vpn-connected {
+    color: #88cc88;
+}
+
+#custom-show-vpn-status.vpn-disconnected {
+    color: #ff6b6b;
+}

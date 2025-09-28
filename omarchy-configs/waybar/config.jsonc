@@ -7,12 +7,11 @@
   "modules-left": ["custom/omarchy", "hyprland/workspaces"],
   "modules-center": ["clock", "custom/update", "custom/screenrecording-indicator"],
   "modules-right": [
-    "group/tray-expander",
+    "tray",
     "bluetooth",
-    "network",
+    "custom/show-vpn-status",
     "pulseaudio",
     "cpu",
-    "battery"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -35,7 +34,11 @@
       "2": [],
       "3": [],
       "4": [],
-      "5": []
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": []
     }
   },
   "custom/omarchy": {
@@ -51,7 +54,6 @@
     "signal": 7,
     "interval": 3600
   },
-
   "cpu": {
     "interval": 5,
     "format": "󰍛",
@@ -73,7 +75,6 @@
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
-    "spacing": 1,
     "on-click": "omarchy-launch-wifi"
   },
   "battery": {
@@ -113,26 +114,20 @@
       "default": ["", "", ""]
     }
   },
-  "group/tray-expander": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 600,
-      "children-class": "tray-group-item"
-    },
-    "modules": ["custom/expand-icon", "tray"]
-  },
-  "custom/expand-icon": {
-    "format": " ",
-    "tooltip": false
-  },
   "custom/screenrecording-indicator": {
     "on-click": "omarchy-cmd-screenrecord",
     "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
     "signal": 8,
     "return-type": "json"
   },
+  "custom/show-vpn-status": {
+    "exec": "~/.config/scripts/show-vpn-status.sh",
+    "return-type": "json",
+    "interval": 2,
+    "tooltip": true,
+  },
   "tray": {
-    "icon-size": 12,
+    "icon-size": 14,
     "spacing": 12
   }
 }
