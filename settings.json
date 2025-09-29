@@ -1,0 +1,55 @@
+{
+  "files.associations": {
+    "renv.lock": "json",
+    "*.html": "html",
+    "*.css": "tailwindcss",
+    "*.py": "python"
+  },
+  "editor.formatOnSave": true,
+  "vim.smartRelativeLine": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [";"],
+      "after": [":"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "workbench.colorTheme": "Default Positron Light",
+  "liveServer.settings.donotVerifyTags": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnSave": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.defaultColorDecorators": "never",
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "[html]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.stickyScroll.enabled": false,
+  "editor.rulers": [80],
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 80,
+  "editor.fontFamily": "monospace, 'Droid Sans Mono', 'monospace'",
+  "workbench.startupEditor": "none",
+  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+  "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+  "postgresExplorer.connections": []
+}
