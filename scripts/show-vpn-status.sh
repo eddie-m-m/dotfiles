@@ -1,0 +1,1 @@
+../omarchy-configs/scripts/show-vpn-status.sh
